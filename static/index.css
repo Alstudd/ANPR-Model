@@ -1,0 +1,155 @@
+html {
+  text-align: center;
+  background-color: #EEF4FF;
+}
+
+.App-header {
+  background-color: #EEF4FF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.pre_img {
+  height: 600px;
+  width: 600px;
+  /* background-color: white; */
+}
+
+input[type="file"] {
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 40px 40px;
+  /* display: none; */
+}
+
+#pre {
+  background-color: black; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px 40px;
+}
+
+p {
+  margin: 50px;
+  font-size: 72px;
+}
+
+#link {
+  visibility: hidden;
+}
+
+#videobox {
+  object-fit: fill;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  display: none;
+}
+
+#imagebox {
+  object-fit: fill;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  /* display: none; */
+}
+
+#videoImgRes {
+  object-fit: fill;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  display: none;
+}
+
+#download {
+  color: #3498db;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.line{
+  width: 10px;
+  color: black;
+  width: 75%;
+}
+
+.button-loader {
+  display: flex;
+  gap: 10px;
+}
+
+.loader {
+  display: none;
+  border: 16px solid #3498db;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#sendbutton:disabled {
+  color: rgb(150, 150, 150);
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7d0ff; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #66bffa; 
+}

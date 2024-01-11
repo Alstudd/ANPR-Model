@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ANPR Model</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="App">
+      <header class="App-header">
+        <h1>Automatic Number Plate Recogniton AI</h1>
+        <div><h2 id="noPlateText"></h2></div>
+        <div className="pre_img">
+          <span
+            ><img
+              id="imagebox"
+              src="{{ url_for('static', filename='chatbot.gif') }}"
+              width="320"
+              height="240"
+          />
+          <img
+              id="videoImgRes"
+              src="{{ url_for('static', filename='chatbot.gif') }}"
+              width="320"
+              height="240"
+          />
+        </span>
+        </div>
+        <video id="videobox" width="320" height="240" controls>
+          <source src="" type="video/mp4" />
+        </video>
+        <a href="/opencam"><button name="cam" class="button" id="opencam">Web Cam</button></a>
+        <br />
+        <hr class="line" />
+        <form method="post" action="/detect" enctype="multipart/form-data">
+          <input
+            id="imageinput"
+            type="file"
+            name="image"
+            onchange="readUrl(this)"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div class="button-loader">
+              <button
+                onclick="disableSend()"
+                name="send"
+                class="button"
+                id="sendbutton"
+              >
+                Send
+              </button>
+              <div id="loadFile" class="loader"></div>
+            </div>
+          </div>
+        </form>
+        <br />
+        <div id="link">
+          <a href="" id="download" download>Download</a>
+        </div>
+      </header>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+  </body>
+</html>
