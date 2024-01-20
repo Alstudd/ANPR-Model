@@ -27,7 +27,8 @@ window.onload = () => {
           $('#sendbutton').removeAttr('disabled');
           $("#link").css("visibility", "visible");
           $("#noPlateText").css("display", "block");
-          $("#noPlateText").text(`Number plate is ${data[1]}`);
+          document.getElementById("noPlateText").innerHTML = `<h2>Number Plate is <span style="color: #1e88e5;">${data[1]}</span></h2>`
+          $("#download").css("display", "block");
           $("#download").attr("href", "static/Saved/" + data[0]);
           if (fileType = "video") {
             $("#videoImgRes").css("display", "block");

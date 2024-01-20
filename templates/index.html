@@ -12,10 +12,9 @@
     <div class="App">
       <header class="App-header">
         <h1>Automatic Number Plate Recogniton AI</h1>
-        <div><h2 id="noPlateText"></h2></div>
-        <div className="pre_img">
-          <span
-            ><img
+        <div id="noPlateText"></div>
+        <div style="display: flex; justify-content:center; gap: 20px;" className="pre_img">
+          <img
               id="imagebox"
               src="{{ url_for('static', filename='chatbot.gif') }}"
               width="320"
@@ -27,12 +26,17 @@
               width="320"
               height="240"
           />
-        </span>
+          <video id="videobox" width="320" height="240" controls>
+            <source src="" type="video/mp4" />
+          </video>
         </div>
-        <video id="videobox" width="320" height="240" controls>
-          <source src="" type="video/mp4" />
-        </video>
-        <a href="/opencam"><button name="cam" class="button" id="opencam">Web Cam</button></a>
+        <div style="margin-bottom: 20px;" id="link">
+          <a href="" id="download" class="button" style="background-color: #1e88e5; color: white;" download>Download Result</a>
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="/opencam"><button style="cursor: pointer;" name="cam" class="button" id="opencam">Web Cam</button></a>
+          <a href="/realTimeVideo"><button style="cursor: pointer;" name="cam" class="button" id="opencam">Video Cam</button></a>
+        </div>
         <br />
         <hr class="line" />
         <form method="post" action="/detect" enctype="multipart/form-data">
@@ -64,9 +68,7 @@
           </div>
         </form>
         <br />
-        <div id="link">
-          <a href="" id="download" download>Download</a>
-        </div>
+        
       </header>
     </div>
     <script

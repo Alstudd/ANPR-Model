@@ -82,7 +82,12 @@ p {
   display: none;
 }
 
+#noPlateText {
+  display: none;
+}
+
 #download {
+  display: none;
   color: #3498db;
 }
 

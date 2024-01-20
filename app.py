@@ -212,7 +212,7 @@ def webcam():
 
 @app.route("/realTimeVideo", methods=['GET', 'POST'])
 def realTimeVideo():
-    camera = cv2.VideoCapture("static/video1.mp4")
+    camera = cv2.VideoCapture("static/video2.mp4")
     return Response(generate_frames(camera), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route("/videocam", methods=['GET', 'POST'])
